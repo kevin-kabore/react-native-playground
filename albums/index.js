@@ -8,12 +8,14 @@ import AlbumList from './src/components/AlbumList';
 
 // Create a component
 class App extends Component {
-  componentWillMount() {
+  state = { albums: [] };
+  componentDidMount() {
     fetch('https://rallycoding.herokuapp.com/api/music_albums')
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(albums => this.setState({ albums }));
   }
   render() {
+    console.log(this.state);
     return (
       <View>
         <Header headerText={'Albums'} />
