@@ -26,9 +26,11 @@ const AlbumDetail = ({ album }) => {
           <Text>{artist}</Text>
         </View>
       </CardSection>
+
       <CardSection>
         <Image style={imageStyle} source={{ uri: image }} />
       </CardSection>
+
       <CardSection>
         <Button />
       </CardSection>
