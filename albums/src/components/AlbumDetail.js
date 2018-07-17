@@ -1,11 +1,28 @@
 import React from 'react';
 
-import { View, Text } from 'react-native';
+import { Text, View, Image } from 'react-native';
+import Card from './Card';
+import CardSection from './CardSection';
 
 const AlbumDetail = ({ album }) => (
-  <View>
-    <Text>{album.title}</Text>
-  </View>
+  <Card>
+    <CardSection>
+      <View>
+        <Image />
+      </View>
+      <View style={styles.textContainerStyle}>
+        <Text>{album.title}</Text>
+        <Text>{album.artist}</Text>
+      </View>
+    </CardSection>
+  </Card>
 );
+
+const styles = {
+  textContainerStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  }
+};
 
 export default AlbumDetail;
