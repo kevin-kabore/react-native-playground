@@ -17,4 +17,5 @@ const styles = {
   }
 };
 
+// so can be imported from /common/index.js as CardSection
 export { CardSection };

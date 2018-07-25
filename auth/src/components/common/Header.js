@@ -28,4 +28,5 @@ const styles = {
     fontSize: 20
   }
 };
+// so can be imported from /common/index.js as Header
 export { Header };
